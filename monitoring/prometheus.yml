@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: container-reliability-lab
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["reliability-lab.reliability-lab.svc.cluster.local:8080"]
